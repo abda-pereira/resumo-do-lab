@@ -35,3 +35,6 @@ Filtrar serviços por categoria permite uma navegação mais eficiente, além de
 - [Portal Azure](https://portal.azure.com/)
 - [Documentação Oficial do Azure](https://docs.microsoft.com/azure/)
 
+
+**Ref.: DIO - Formação Microsoft AZ-900 Certification**
+
