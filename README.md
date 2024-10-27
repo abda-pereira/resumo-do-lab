@@ -3,7 +3,7 @@
 - [Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria](#desafio-de-projeto-1-microsoft-azure---localizando-serviços-por-categoria)
 - [Desafio de Projeto 2: Criando máquinas Virtuais na Azure](#desafio-de-projeto-2-criando-máquinas-virtuais-na-azure)
 - [Desafio de Projeto 3: Configurando uma instância de Banco de Dados na Azure](#desafio-de-projeto-3-configurando-uma-instância-de-banco-de-dados-na-azure)
-<br><br>
+<br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
 
 ## Localizando Serviços por Categoria na Azure
