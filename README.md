@@ -38,8 +38,8 @@ Filtrar serviços por categoria permite uma navegação mais eficiente, além de
 ## Links Úteis:
 - [Portal Azure](https://portal.azure.com/)
 - [Documentação Oficial do Azure](https://docs.microsoft.com/azure/)
-
-
+  
+<br><br><br>
 # Desafio de Projeto 2: Criando máquinas Virtuais na Azure
 
 ## Benefícios do Uso da Nuvem com Azure
@@ -70,7 +70,7 @@ A plataforma oferece serviços avançados de IA e Machine Learning, além de fer
 ### 8. **Inovação Contínua**
 A Microsoft constantemente atualiza e melhora os serviços Azure, garantindo que você sempre tenha acesso às mais recentes inovações tecnológicas, mantendo-se à frente da concorrência.
 
-
+<br><br><br>
 # Desafio de Projeto 3: Configurando uma instância de Banco de Dados na Azure
 A Microsoft Azure oferece uma ampla variedade de serviços de nuvem, organizados em várias categorias. Abaixo estão os principais tipos de serviços disponíveis:
 
