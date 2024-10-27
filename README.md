@@ -3,6 +3,8 @@
 - [Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria](#desafio-de-projeto-1-microsoft-azure---localizando-serviços-por-categoria)
 - [Desafio de Projeto 2: Criando máquinas Virtuais na Azure](#desafio-de-projeto-2-criando-máquinas-virtuais-na-azure)
 - [Desafio de Projeto 3: Configurando uma instância de Banco de Dados na Azure](#desafio-de-projeto-3-configurando-uma-instância-de-banco-de-dados-na-azure)
+- [Desafio de Projeto 4: Componentes de Arquitetura do Azure](#desafio-de-projeto-4-componentes-de-arquitetura-do-azure)
+
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
 
@@ -149,6 +151,48 @@ Azure integra ferramentas que suportam o ciclo completo de desenvolvimento e ope
 - **Azure DevTest Labs**: Ambiente de desenvolvimento e teste sob demanda.
 - **Azure Pipelines**: Integração contínua e entrega contínua (CI/CD) para qualquer linguagem de programação.
 
+<br><br><br>
+# Desafio de Projeto 4: Componentes de Arquitetura do Azure
 
+## 1. **Azure Resource Groups**
+   - São contêineres que organizam e agrupam recursos relacionados do Azure, como máquinas virtuais, bancos de dados, redes e muito mais. Facilita a gestão e aplicação de políticas sobre um conjunto de recursos.
+
+## 2. **Azure Virtual Network (VNet)**
+   - Permite a comunicação entre recursos do Azure, como máquinas virtuais, e entre redes on-premises e a nuvem. A VNet possibilita isolar redes, configurar sub-redes e definir regras de segurança.
+
+## 3. **Máquinas Virtuais (VMs)**
+   - Recursos de computação on-demand que oferecem flexibilidade para rodar sistemas operacionais e aplicações de maneira personalizada, com opções de configuração escaláveis.
+
+## 4. **Azure App Services**
+   - Serviço gerenciado que permite construir, implantar e escalar aplicativos web, APIs, e back-ends móveis. Suporta várias linguagens e frameworks, incluindo .NET, Node.js, Java, e Python.
+
+## 5. **Azure Kubernetes Service (AKS)**
+   - Serviço gerenciado de orquestração de contêineres Kubernetes que simplifica a implantação, gestão e escalabilidade de aplicativos em contêineres no Azure.
+
+## 6. **Azure Functions**
+   - Serviço de "computação sem servidor" (serverless) que permite a execução de código sob demanda em resposta a eventos. Ideal para cenários de automação e processamento de dados em tempo real.
+
+## 7. **Banco de Dados do Azure**
+   - O Azure oferece várias opções de banco de dados gerenciado, incluindo SQL Database, Cosmos DB (banco NoSQL multi-modelo), e Database for PostgreSQL e MySQL. Estes serviços garantem alta disponibilidade e escalabilidade.
+
+## 8. **Azure Storage**
+   - Solução de armazenamento de dados de alta durabilidade e escalabilidade que oferece tipos de armazenamento como Blob (objetos), File (arquivos), Table (NoSQL) e Queue (mensagens), ideal para diferentes tipos de dados e aplicações.
+
+## 9. **Azure Active Directory (Azure AD)**
+   - Serviço de identidade e autenticação que oferece gerenciamento de acesso seguro, autenticação multifatorial e SSO (Single Sign-On) para aplicativos em nuvem e on-premises.
+
+## 10. **Azure DevOps**
+   - Conjunto de ferramentas para colaboração e desenvolvimento contínuo, integração contínua (CI) e entrega contínua (CD). Fornece repositórios Git, pipelines de CI/CD, e ferramentas para gerenciamento de projetos.
+
+## 11. **Azure Monitor**
+   - Ferramenta de monitoramento e análise para coletar e visualizar métricas e logs de recursos do Azure, oferecendo insights sobre a saúde e desempenho das aplicações.
+
+## 12. **Azure Policy e Azure Blueprints**
+   - **Azure Policy** ajuda a impor regras de conformidade e governança dos recursos. **Azure Blueprints** fornece uma estrutura para implantar arquiteturas consistentes e seguras, incluindo políticas, controles e padrões.
+
+Esses componentes, combinados de acordo com as necessidades específicas, permitem construir soluções flexíveis, escaláveis e seguras na plataforma Microsoft Azure.
+
+
+<br><br><br>
 **Ref.: DIO - Formação Microsoft AZ-900 Certification**
 
