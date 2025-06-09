@@ -5,6 +5,7 @@
 - [Desafio de Projeto 3: Configurando uma instância de Banco de Dados na Azure](#desafio-de-projeto-3-configurando-uma-instância-de-banco-de-dados-na-azure)
 - [Desafio de Projeto 4: Componentes de Arquitetura do Azure](#desafio-de-projeto-4-componentes-de-arquitetura-do-azure)
 - [Desafio de Projeto 5: Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure](#desafio-de-projeto-5-configurando-recursos-e-dimensionamentos-em-máquinas-virtuais-na-azure)
+- [Desafio de Projeto 6: Dominando o Armazenamento na Azure](#desafio-de-projeto-5-configurando-recursos-e-dimensionamentos-em-máquinas-virtuais-na-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
@@ -248,6 +249,72 @@ Esses componentes, combinados de acordo com as necessidades específicas, permit
 - Use discos gerenciados Premium para aplicações críticas.
 - Aplique tags e grupos de recursos para organização e governança.
 - Automatize a escalabilidade com regras de autoscale.
+
+<br><br><br>
+# Desafio de Projeto 6: Dominando o Armazenamento na Azure
+O **Microsoft Azure** oferece uma ampla gama de soluções de armazenamento para diferentes tipos de dados e cenários de uso. Dominar esses serviços é essencial para garantir escalabilidade, segurança, desempenho e economia em aplicações na nuvem.
+
+## 1. Tipos de Armazenamento
+
+### **Blob Storage**
+- Armazenamento de objetos para grandes quantidades de dados não estruturados.
+- Ideal para imagens, vídeos, backups, logs e dados para big data.
+- Suporta três tipos de blobs:
+  - **Block Blobs** (arquivos em blocos)
+  - **Append Blobs** (arquivos de log)
+  - **Page Blobs** (discos de VM)
+
+### **File Storage (Azure Files)**
+- Compartilhamento de arquivos gerenciado com protocolo SMB ou NFS.
+- Pode ser montado em máquinas Windows, Linux ou em VMs no Azure.
+- Ideal para migração de file servers tradicionais para a nuvem.
+
+### **Queue Storage**
+- Serviço de mensagens assíncronas entre componentes de aplicações distribuídas.
+- Permite desacoplar serviços e gerenciar cargas de trabalho com mais eficiência.
+
+### **Table Storage**
+- Armazenamento NoSQL chave-valor para grandes volumes de dados estruturados.
+- Alternativa leve e econômica para bancos relacionais em alguns cenários.
+
+### **Disk Storage**
+- Usado como disco para Máquinas Virtuais.
+- Tipos:
+  - **Standard HDD**: custo mais baixo, uso esporádico.
+  - **Standard SSD**: equilíbrio entre preço e desempenho.
+  - **Premium SSD**: alta performance para aplicações críticas.
+  - **Ultra Disk**: baixíssima latência e IOPS elevado.
+
+## 2. Redundância e Durabilidade
+
+O Azure oferece diferentes opções de **redundância** para garantir alta disponibilidade e proteção contra perda de dados:
+
+| Tipo       | Localização     | Durabilidade Anual         |
+|------------|-----------------|----------------------------|
+| **LRS**    | Datacenter local | 11 noves (99.999999999%)   |
+| **ZRS**    | Zona de disponibilidade | Alta disponibilidade entre zonas |
+| **GRS**    | Região secundária | Replicação geográfica assíncrona |
+| **RA-GRS** | Região secundária com leitura | GRS com acesso de leitura adicional |
+
+## 3. Ferramentas de Gerenciamento
+
+### **AzCopy**
+- Utilitário de linha de comando para transferir arquivos e blobs para ou do Azure.
+
+### **Storage Explorer**
+- Aplicativo gráfico para gerenciar contas de armazenamento, blobs, filas, arquivos e tabelas.
+
+### **Azure Portal, CLI e PowerShell**
+- Interfaces para criação, configuração e automação do gerenciamento de armazenamento.
+
+## 4. Boas Práticas
+
+- Nomeie contas de armazenamento com **nomes globais únicos**, usando letras minúsculas e números.
+- Use **camadas de acesso (Hot, Cool, Archive)** para otimizar custos com base na frequência de uso dos dados.
+- Aplique **políticas de segurança**, como criptografia em repouso e em trânsito.
+- Utilize **tags e grupos de recursos** para organização e controle.
+- Configure **alertas e monitoramento** com Azure Monitor e diagnósticos de armazenamento.
+
 
 <br><br><br>
 **Ref.: DIO - Formação Microsoft AZ-900 Certification**
