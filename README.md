@@ -4,6 +4,7 @@
 - [Desafio de Projeto 2: Criando máquinas Virtuais na Azure](#desafio-de-projeto-2-criando-máquinas-virtuais-na-azure)
 - [Desafio de Projeto 3: Configurando uma instância de Banco de Dados na Azure](#desafio-de-projeto-3-configurando-uma-instância-de-banco-de-dados-na-azure)
 - [Desafio de Projeto 4: Componentes de Arquitetura do Azure](#desafio-de-projeto-4-componentes-de-arquitetura-do-azure)
+- [Desafio de Projeto 5: Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure](#desafio-de-projeto-5-configurando-recursos-e-dimensionamentos-em-maquinas-virtuais-na-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
@@ -192,6 +193,61 @@ Azure integra ferramentas que suportam o ciclo completo de desenvolvimento e ope
 
 Esses componentes, combinados de acordo com as necessidades específicas, permitem construir soluções flexíveis, escaláveis e seguras na plataforma Microsoft Azure.
 
+<br><br><br>
+# Desafio de Projeto 5: Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure
+## 1. **Escolha da Imagem da Máquina Virtual**
+- O Azure oferece uma ampla variedade de imagens pré-configuradas de sistemas operacionais, como Windows Server, Ubuntu, Red Hat, entre outros.
+- Também é possível utilizar imagens personalizadas criadas pelo próprio usuário.
+
+## 2. **Tamanhos e Séries de VM**
+- As VMs são classificadas em **séries** que atendem diferentes tipos de cargas de trabalho:
+  - **B-series** (uso esporádico com economia de custo)
+  - **D-series** (uso geral)
+  - **E-series** (otimizado para memória)
+  - **F-series** (otimizado para CPU)
+  - **N-series** (processamento gráfico com GPU)
+- Cada tamanho define a quantidade de vCPUs, memória RAM, disco e throughput de rede.
+
+## 3. **Discos e Armazenamento**
+- **Disco do sistema operacional:** obrigatório para todas as VMs.
+- **Discos de dados:** podem ser adicionados conforme necessidade.
+- Tipos de discos:
+  - **Standard HDD** – mais barato, desempenho básico.
+  - **Standard SSD** – boa performance com custo moderado.
+  - **Premium SSD** – alto desempenho para aplicações críticas.
+  - **Ultra Disk** – para cargas de trabalho com alta demanda de IOPS e baixa latência.
+
+## 4. **Rede e Segurança**
+- Cada VM é associada a uma **VNet (Virtual Network)** e pode ser conectada a outras redes ou recursos.
+- É possível configurar:
+  - **IP público ou privado**
+  - **NSGs (Network Security Groups)** para controle de tráfego
+  - **Azure Bastion** para acesso seguro via navegador
+
+## 5. **Dimensionamento Vertical**
+- Ajustar os recursos de uma VM (ex: trocar de D2s_v3 para D4s_v3) conforme a carga de trabalho aumenta.
+- Pode ser feito com a VM desligada (em alguns casos, com downtime).
+
+## 6. **Dimensionamento Horizontal (Escalabilidade)**
+- Usar conjuntos de dimensionamento (**Scale Sets**) para distribuir automaticamente instâncias da mesma VM.
+- Permite escalar automaticamente com base em métricas como uso de CPU ou latência.
+
+## 7. **Alta Disponibilidade e Recuperação**
+- **Zonas de disponibilidade:** distribuem VMs por diferentes zonas físicas no mesmo datacenter.
+- **Conjuntos de disponibilidade (Availability Sets):** garantem que as VMs estejam em domínios de falha e atualização distintos.
+- **Backup e replicação:** podem ser configurados com Azure Backup e Azure Site Recovery.
+
+## 8. **Monitoramento e Otimização**
+- **Azure Monitor** e **Log Analytics** ajudam a acompanhar o desempenho da VM.
+- **Advisor** sugere práticas de otimização de custos e desempenho.
+
+---
+
+## Boas Práticas
+- Escolha o tamanho da VM com base na carga estimada, evitando superdimensionamento.
+- Use discos gerenciados Premium para aplicações críticas.
+- Aplique tags e grupos de recursos para organização e governança.
+- Automatize a escalabilidade com regras de autoscale.
 
 <br><br><br>
 **Ref.: DIO - Formação Microsoft AZ-900 Certification**
