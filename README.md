@@ -4,7 +4,7 @@
 - [Desafio de Projeto 2: Criando máquinas Virtuais na Azure](#desafio-de-projeto-2-criando-máquinas-virtuais-na-azure)
 - [Desafio de Projeto 3: Configurando uma instância de Banco de Dados na Azure](#desafio-de-projeto-3-configurando-uma-instância-de-banco-de-dados-na-azure)
 - [Desafio de Projeto 4: Componentes de Arquitetura do Azure](#desafio-de-projeto-4-componentes-de-arquitetura-do-azure)
-- [Desafio de Projeto 5: Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure](#desafio-de-projeto-5-configurando-recursos-e-dimensionamentos-em-maquinas-virtuais-na-azure)
+- [Desafio de Projeto 5: Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure](#desafio-de-projeto-5-configurando-recursos-e-dimensionamentos-em-máquinas-virtuais-na-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
