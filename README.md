@@ -6,6 +6,7 @@
 - [Desafio de Projeto 4: Componentes de Arquitetura do Azure](#desafio-de-projeto-4-componentes-de-arquitetura-do-azure)
 - [Desafio de Projeto 5: Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure](#desafio-de-projeto-5-configurando-recursos-e-dimensionamentos-em-máquinas-virtuais-na-azure)
 - [Desafio de Projeto 6: Dominando o Armazenamento na Azure](#desafio-de-projeto-6-dominando-o-armazenamento-na-azure)
+- [Desafio de Projeto 7: Entendendo Segurança e Identidade na Azure](#desafio-de-projeto-6-dominando-o-armazenamento-na-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
@@ -314,6 +315,69 @@ O Azure oferece diferentes opções de **redundância** para garantir alta dispo
 - Aplique **políticas de segurança**, como criptografia em repouso e em trânsito.
 - Utilize **tags e grupos de recursos** para organização e controle.
 - Configure **alertas e monitoramento** com Azure Monitor e diagnósticos de armazenamento.
+
+
+<br><br><br>
+# Desafio de Projeto 7: Entendendo Segurança e Identidade na Azure
+
+A **segurança e a gestão de identidade** são pilares fundamentais da nuvem Azure. Com uma abordagem baseada em **Zero Trust**, o Azure fornece ferramentas e serviços para proteger dados, controlar acessos e manter a conformidade em ambientes cloud e híbridos.
+
+## 👤 1. Azure Active Directory (Azure AD)
+
+- Serviço de **gerenciamento de identidade e acesso** (IAM) baseado em nuvem.
+- Permite controlar quem pode acessar o quê e com que permissões.
+- Principais recursos:
+  - **Autenticação multifator (MFA)**
+  - **Single Sign-On (SSO)**
+  - **Integração com Microsoft 365, SaaS e aplicativos personalizados**
+  - **Conditional Access (acesso condicional)**
+  - **Identidade Híbrida** com sincronização de diretórios locais via Azure AD Connect
+
+## 🛡️ 2. Controle de Acesso Baseado em Funções (RBAC)
+
+- Define **quem pode fazer o quê em quais recursos**.
+- Permite aplicar o princípio do **menor privilégio**.
+- Três elementos principais:
+  - **Principal de segurança** (usuário, grupo, aplicativo)
+  - **Função (role)** (ex: Leitor, Colaborador, Administrador de VM)
+  - **Escopo** (assinatura, grupo de recursos, recurso)
+
+## 🔒 3. Azure Key Vault
+
+- Serviço para armazenar e acessar com segurança:
+  - **Segredos**
+  - **Chaves de criptografia**
+  - **Certificados**
+- Integração com aplicações, serviços e pipelines DevOps.
+- Protege informações sensíveis de configuração.
+
+## 🌐 4. Segurança de Rede
+
+- **Network Security Groups (NSGs):** controlam o tráfego de rede para VMs e sub-redes.
+- **Azure Firewall:** firewall gerenciado com inspeção de tráfego, filtragem e integração com logs.
+- **Azure DDoS Protection:** proteção contra ataques de negação de serviço distribuído.
+- **Private Endpoints:** permitem acesso privado a serviços do Azure por meio da VNet.
+
+## 🔍 5. Monitoramento e Resposta
+
+- **Microsoft Defender for Cloud:**
+  - Avalia postura de segurança e recomenda melhorias.
+  - Detecta ameaças em tempo real e ativa alertas.
+- **Azure Sentinel (SIEM/SOAR):**
+  - Análise inteligente de ameaças.
+  - Automação de respostas de segurança.
+
+## 🔑 6. Identidades Gerenciadas (Managed Identities)
+
+- Permitem que aplicações em execução no Azure **se autentiquem automaticamente** em outros serviços do Azure, **sem armazenar credenciais no código**.
+
+## ✅ 7. Boas Práticas de Segurança
+
+- Habilite **MFA para todos os usuários**.
+- Aplique **acesso condicional** para controlar contexto de login (localização, dispositivo, etc.).
+- Use **RBAC com o menor privilégio necessário**.
+- Ative **logs e auditorias** para acompanhar atividades suspeitas.
+- Revise periodicamente as **permissões de usuários e aplicativos**.
 
 
 <br><br><br>
