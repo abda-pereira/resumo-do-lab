@@ -7,6 +7,7 @@
 - [Desafio de Projeto 5: Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure](#desafio-de-projeto-5-configurando-recursos-e-dimensionamentos-em-máquinas-virtuais-na-azure)
 - [Desafio de Projeto 6: Dominando o Armazenamento na Azure](#desafio-de-projeto-6-dominando-o-armazenamento-na-azure)
 - [Desafio de Projeto 7: Entendendo Segurança e Identidade na Azure](#desafio-de-projeto-7-entendendo-segurança-e-identidade-na-azure)
+- [Desafio de Projeto 8: Otimizando Custos no Azure](#desafio-de-projeto-7-entendendo-segurança-e-identidade-na-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
@@ -322,7 +323,7 @@ O Azure oferece diferentes opções de **redundância** para garantir alta dispo
 
 A **segurança e a gestão de identidade** são pilares fundamentais da nuvem Azure. Com uma abordagem baseada em **Zero Trust**, o Azure fornece ferramentas e serviços para proteger dados, controlar acessos e manter a conformidade em ambientes cloud e híbridos.
 
-## 👤 1. Azure Active Directory (Azure AD)
+## 1. Azure Active Directory (Azure AD)
 
 - Serviço de **gerenciamento de identidade e acesso** (IAM) baseado em nuvem.
 - Permite controlar quem pode acessar o quê e com que permissões.
@@ -333,7 +334,7 @@ A **segurança e a gestão de identidade** são pilares fundamentais da nuvem Az
   - **Conditional Access (acesso condicional)**
   - **Identidade Híbrida** com sincronização de diretórios locais via Azure AD Connect
 
-## 🛡️ 2. Controle de Acesso Baseado em Funções (RBAC)
+## 2. Controle de Acesso Baseado em Funções (RBAC)
 
 - Define **quem pode fazer o quê em quais recursos**.
 - Permite aplicar o princípio do **menor privilégio**.
@@ -342,7 +343,7 @@ A **segurança e a gestão de identidade** são pilares fundamentais da nuvem Az
   - **Função (role)** (ex: Leitor, Colaborador, Administrador de VM)
   - **Escopo** (assinatura, grupo de recursos, recurso)
 
-## 🔒 3. Azure Key Vault
+## 3. Azure Key Vault
 
 - Serviço para armazenar e acessar com segurança:
   - **Segredos**
@@ -351,14 +352,14 @@ A **segurança e a gestão de identidade** são pilares fundamentais da nuvem Az
 - Integração com aplicações, serviços e pipelines DevOps.
 - Protege informações sensíveis de configuração.
 
-## 🌐 4. Segurança de Rede
+## 4. Segurança de Rede
 
 - **Network Security Groups (NSGs):** controlam o tráfego de rede para VMs e sub-redes.
 - **Azure Firewall:** firewall gerenciado com inspeção de tráfego, filtragem e integração com logs.
 - **Azure DDoS Protection:** proteção contra ataques de negação de serviço distribuído.
 - **Private Endpoints:** permitem acesso privado a serviços do Azure por meio da VNet.
 
-## 🔍 5. Monitoramento e Resposta
+## 5. Monitoramento e Resposta
 
 - **Microsoft Defender for Cloud:**
   - Avalia postura de segurança e recomenda melhorias.
@@ -367,11 +368,11 @@ A **segurança e a gestão de identidade** são pilares fundamentais da nuvem Az
   - Análise inteligente de ameaças.
   - Automação de respostas de segurança.
 
-## 🔑 6. Identidades Gerenciadas (Managed Identities)
+## 6. Identidades Gerenciadas (Managed Identities)
 
 - Permitem que aplicações em execução no Azure **se autentiquem automaticamente** em outros serviços do Azure, **sem armazenar credenciais no código**.
 
-## ✅ 7. Boas Práticas de Segurança
+## 7. Boas Práticas de Segurança
 
 - Habilite **MFA para todos os usuários**.
 - Aplique **acesso condicional** para controlar contexto de login (localização, dispositivo, etc.).
@@ -379,6 +380,77 @@ A **segurança e a gestão de identidade** são pilares fundamentais da nuvem Az
 - Ative **logs e auditorias** para acompanhar atividades suspeitas.
 - Revise periodicamente as **permissões de usuários e aplicativos**.
 
+
+<br><br><br>
+# Desafio de Projeto 8: Otimizando Custos no Azure
+O **gerenciamento de custos** é fundamental para garantir que suas soluções na nuvem sejam sustentáveis e escaláveis. A seguir, um resumo das principais práticas e ferramentas para **otimizar gastos** no Microsoft Azure.
+
+## 1. Planejamento e Governança
+
+- **Orçamentos e Alertas**  
+  - Defina **orçamentos mensais** no Azure Cost Management.  
+  - Configure **alertas** para notificá-lo quando uma porcentagem do orçamento for atingida.
+
+- **Tags e Políticas**  
+  - Aplique **tags** (ex: dono, projeto, ambiente) para rastrear consumo por departamento ou aplicação.  
+  - Use **Azure Policy** para impor padrões de naming e impedir criação de recursos fora de padrão.
+
+## 2. Uso de Camadas e Tiers
+
+- **Camadas de Armazenamento**  
+  - **Hot, Cool e Archive**: escolha com base na frequência de acesso.  
+  - Mova dados frios para camadas mais baratas via políticas de ciclo de vida.
+
+- **Perfis de Rede**  
+  - Avalie se o **ExpressRoute** ou VPN gerenciada compensa em custos de transferência de dados.
+
+## 3. Dimensionamento e Reserva
+
+- **Escalabilidade Automática**  
+  - Configure **autoscale** em App Services, VMs e Scale Sets para ajustar instâncias ao tráfego real.
+
+- **Instâncias Reservadas (RI)**  
+  - Reserve capacidade de VMs, SQL Database ou Cosmos DB por 1 ou 3 anos com desconto de até 72%.
+
+- **Spot VMs**  
+  - Utilize **Spot Instances** para cargas de trabalho tolerantes a interrupções (batch, dev/test) com até 90% de desconto.
+
+## 4. Otimização de Compute
+
+- **Adequação de Dimensões**  
+  - Use o **Azure Advisor** para recomendações de downsize ou subutilização de VMs.  
+  - Desligue/desaloque VMs de desenvolvimento fora do horário útil.
+
+- **Contêineres e Serverless**  
+  - Em cenários com cargas variáveis, evaluate **Azure Functions** ou **AKS** para pagar apenas pelo consumo efetivo.
+
+## 5. Monitoramento e Relatórios
+
+- **Azure Cost Management + Billing**  
+  - Dashboard interativo para analisar custo por recurso, região, tag ou time.  
+  - Relatórios agendados via exportação de dados em CSV ou Power BI.
+
+- **Log Analytics & Metrics**  
+  - Monitore indicadores de uso (CPU, IOPS, throughput) e correlacione com faturamento.
+
+## 6. Ferramentas Adicionais
+
+| Ferramenta                | Descrição                                                   |
+|---------------------------|-------------------------------------------------------------|
+| **Azure Advisor**         | Sugestões de performance, segurança e custos                |
+| **Azure Pricing Calculator** | Simule cenários e compare custos antes de provisionar     |
+| **Azure Spot VM Advisor** | Identifique workloads que podem migrar para Spot Instances  |
+
+## Boas Práticas
+
+1. **Revisões Periódicas**  
+   - Agende reuniões mensais para revisar gastos e ajustar orçamentos.  
+2. **Automatização**  
+   - Scripts ou Azure Automation para desligar recursos ociosos.  
+3. **Governança Contínua**  
+   - Use Azure Policy & Blueprints para padronizar provisionamento.  
+4. **Educação da Equipe**  
+   - Treine times em práticas de custo-eficiência e uso consciente da nuvem.
 
 <br><br><br>
 **Ref.: DIO - Formação Microsoft AZ-900 Certification**
