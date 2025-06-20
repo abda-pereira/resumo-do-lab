@@ -8,6 +8,7 @@
 - [Desafio de Projeto 6: Dominando o Armazenamento na Azure](#desafio-de-projeto-6-dominando-o-armazenamento-na-azure)
 - [Desafio de Projeto 7: Entendendo Segurança e Identidade na Azure](#desafio-de-projeto-7-entendendo-segurança-e-identidade-na-azure)
 - [Desafio de Projeto 8: Otimizando Custos no Azure](#desafio-de-projeto-8-otimizando-custos-no-azure)
+- [Desafio de Projeto 9: Gerenciando Políticas em Acessos Azure](#desafio-de-projeto-8-otimizando-custos-no-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
@@ -451,6 +452,68 @@ O **gerenciamento de custos** é fundamental para garantir que suas soluções n
    - Use Azure Policy & Blueprints para padronizar provisionamento.  
 4. **Educação da Equipe**  
    - Treine times em práticas de custo-eficiência e uso consciente da nuvem.
+
+<br><br><br>
+# Desafio de Projeto 9: Gerenciando Políticas em Acessos Azure
+A **gestão de acesso e conformidade** é essencial para manter o controle, a segurança e a organização em ambientes na nuvem. O Azure oferece ferramentas robustas para definir **quem pode acessar o quê**, **com que permissões** e **em quais condições**.
+
+## 1. Controle de Acesso Baseado em Funções (RBAC)
+
+- Permite conceder **permissões granulares** para usuários, grupos, aplicativos e serviços gerenciados.
+- Baseado em três elementos principais:
+  - **Principal de Segurança**: quem está acessando (usuário, grupo, app, identidade gerenciada)
+  - **Função (Role)**: o que ele pode fazer (ex: Leitor, Colaborador, Administrador de Rede)
+  - **Escopo**: onde ele pode atuar (assinatura, grupo de recursos ou recurso específico)
+
+### Exemplos de Funções Comuns:
+| Função               | Permissões                                                  |
+|----------------------|-------------------------------------------------------------|
+| Leitor               | Visualiza recursos, sem alterar                             |
+| Colaborador          | Cria e gerencia recursos, exceto controle de acesso         |
+| Proprietário         | Controle total, incluindo permissões                        |
+| Administrador de VM  | Gerencia máquinas virtuais, mas não outras partes do sistema|
+
+## 2. Acesso Condicional (Conditional Access)
+
+- Permite aplicar políticas com base em **condições contextuais**:
+  - Localização
+  - Dispositivo
+  - Risco de login
+  - Aplicativo acessado
+
+### Exemplos:
+- Exigir **MFA** (autenticação multifator) ao acessar de fora da rede corporativa.
+- Bloquear login de países não autorizados.
+
+## 3. Azure Policy
+
+- Define e aplica **regras e restrições** sobre recursos para garantir conformidade.
+- Atua preventivamente (impede criação) ou de forma corretiva (avalia e corrige).
+- Exemplo de políticas:
+  - Impedir criação de VMs fora de determinada região.
+  - Exigir que todos os recursos tenham tags de custo.
+  - Forçar uso de SKU específico de armazenamento.
+
+## 4. Azure Blueprints
+
+- Permite **orquestrar políticas, RBAC, templates ARM e recursos** como um pacote reutilizável.
+- Ideal para **padronizar ambientes** em múltiplas assinaturas ou grupos de recursos.
+- Útil em ambientes com **governança corporativa** e **compliance regulatório**.
+
+## 5. Monitoramento e Auditoria
+
+- **Azure Activity Log**: registra todas as ações administrativas.
+- **Log Analytics / Azure Monitor**: fornece insights e alertas sobre alterações de acesso ou falhas em políticas.
+- **Microsoft Defender for Cloud**: avalia a postura de segurança e identifica violações de políticas.
+
+## Boas Práticas
+
+- Use **RBAC com o princípio do menor privilégio**.
+- **Audite e revise permissões** periodicamente.
+- Aplique **políticas para restringir regiões, SKUs e tipos de recursos**.
+- Habilite **MFA** para todos os usuários, especialmente administradores.
+- Use **identidades gerenciadas** para serviços, evitando o uso de credenciais no código.
+
 
 <br><br><br>
 **Ref.: DIO - Formação Microsoft AZ-900 Certification**
