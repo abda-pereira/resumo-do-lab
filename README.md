@@ -9,7 +9,7 @@
 - [Desafio de Projeto 7: Entendendo Segurança e Identidade na Azure](#desafio-de-projeto-7-entendendo-segurança-e-identidade-na-azure)
 - [Desafio de Projeto 8: Otimizando Custos no Azure](#desafio-de-projeto-8-otimizando-custos-no-azure)
 - [Desafio de Projeto 9: Gerenciando Políticas em Acessos Azure](#desafio-de-projeto-9-gerenciando-políticas-em-acessos-azure)
-- [Desafio de Projeto 10: Ferramentas de Implantação na Azure](#desafio-de-projeto-10-gerenciando-políticas-em-acessos-azure)
+- [Desafio de Projeto 10: Ferramentas de Implantação na Azure](#desafio-de-projeto-10-ferramentas-de-implantação-na-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
