@@ -9,6 +9,7 @@
 - [Desafio de Projeto 7: Entendendo Segurança e Identidade na Azure](#desafio-de-projeto-7-entendendo-segurança-e-identidade-na-azure)
 - [Desafio de Projeto 8: Otimizando Custos no Azure](#desafio-de-projeto-8-otimizando-custos-no-azure)
 - [Desafio de Projeto 9: Gerenciando Políticas em Acessos Azure](#desafio-de-projeto-9-gerenciando-políticas-em-acessos-azure)
+- [Desafio de Projeto 10: Ferramentas de Implantação na Azure](#desafio-de-projeto-10-gerenciando-políticas-em-acessos-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
@@ -513,6 +514,117 @@ A **gestão de acesso e conformidade** é essencial para manter o controle, a se
 - Aplique **políticas para restringir regiões, SKUs e tipos de recursos**.
 - Habilite **MFA** para todos os usuários, especialmente administradores.
 - Use **identidades gerenciadas** para serviços, evitando o uso de credenciais no código.
+
+<br><br><br>
+# Desafio de Projeto 10: Ferramentas de Implantação na Azure
+A Microsoft Azure oferece diversas ferramentas para facilitar a **implantação de recursos, serviços e aplicações** de forma automatizada, escalável e consistente. Dominar essas ferramentas é essencial para equipes de desenvolvimento, operações e DevOps.
+
+---
+
+## 1. Azure Portal
+
+- Interface gráfica baseada na web.
+- Permite criar, configurar e gerenciar recursos manualmente.
+- Ideal para protótipos, testes e operações rápidas.
+- Menos indicada para ambientes complexos ou produção repetitiva.
+
+---
+
+## 2. Azure CLI (Command-Line Interface)
+
+- Ferramenta de linha de comando multiplataforma (Windows, Linux, macOS).
+- Permite automação de tarefas como:
+  - Criação de VMs
+  - Gerenciamento de redes
+  - Deploy de aplicações
+
+### Exemplo:
+```bash
+az group create --name MeuGrupo --location brazilsouth
+az vm create --resource-group MeuGrupo --name MinhaVM --image UbuntuLTS
+```
+
+---
+
+## 3. Azure PowerShell
+
+- Similar à Azure CLI, mas com foco em ambientes Windows e administradores que já usam PowerShell.
+- Integra bem com scripts e automações mais complexas no ecossistema Microsoft.
+
+---
+
+## 4. ARM Templates (Azure Resource Manager)
+
+- Arquivos JSON que descrevem a infraestrutura como código (IaC).
+- Reutilizáveis e versionáveis.
+- Permitem implantar:
+  - Máquinas Virtuais
+  - Redes
+  - Bancos de dados
+  - Políticas e muito mais
+
+### Vantagens:
+- Implantação idempotente (evita duplicação)
+- Controle de dependências
+- Validação antes do deploy
+
+---
+
+## 5. Bicep
+
+- Linguagem declarativa mais moderna e legível que JSON para escrever templates ARM.
+- Compila para ARM Templates.
+
+### Exemplo:
+```bicep
+resource minhaStorage 'Microsoft.Storage/storageAccounts@2022-09-01' = {
+  name: 'minhaconta123'
+  location: 'brazilsouth'
+  sku: {
+    name: 'Standard_LRS'
+  }
+  kind: 'StorageV2'
+}
+```
+
+---
+
+## 6. Azure DevOps
+
+- Conjunto de ferramentas de CI/CD (Integração e Entrega Contínua).
+- Principais recursos:
+  - Repositórios Git
+  - Pipelines de Build e Release
+  - Gerenciamento de artefatos
+  - Boards para planejamento ágil
+
+- Ideal para automação de ambientes corporativos e entregas frequentes.
+
+---
+
+## 7. GitHub Actions for Azure
+
+- CI/CD baseado no GitHub, com integração direta com recursos Azure.
+- Workflows definidos em YAML para:
+  - Testar, compilar e publicar código
+  - Fazer deploy em Web Apps, AKS, Functions, etc.
+
+---
+
+## 8. Azure Blueprints
+
+- Agrupamento de templates, políticas, RBAC e recursos padrão.
+- Ideal para padronizar e replicar ambientes em conformidade com diretrizes corporativas.
+
+---
+
+## Boas Práticas
+
+- Utilize **Infraestrutura como Código (IaC)** sempre que possível.
+- Combine ferramentas: CLI para testes locais, ARM/Bicep para produção, Azure DevOps para pipelines.
+- Use **validação e pré-visualização** antes de implantar recursos críticos.
+- Acompanhe implantações com **logs e alertas**.
+
 
 
 <br><br><br>
