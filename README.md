@@ -10,6 +10,7 @@
 - [Desafio de Projeto 8: Otimizando Custos no Azure](#desafio-de-projeto-8-otimizando-custos-no-azure)
 - [Desafio de Projeto 9: Gerenciando Políticas em Acessos Azure](#desafio-de-projeto-9-gerenciando-políticas-em-acessos-azure)
 - [Desafio de Projeto 10: Ferramentas de Implantação na Azure](#desafio-de-projeto-10-ferramentas-de-implantação-na-azure)
+- [Desafio de Projeto 11: Monitoramento Inteligente com o Azure](#desafio-de-projeto-10-ferramentas-de-implantação-na-azure)
 
 <br><br><br>
 # Desafio de Projeto 1: Microsoft Azure - Localizando Serviços por Categoria
@@ -624,6 +625,75 @@ resource minhaStorage 'Microsoft.Storage/storageAccounts@2022-09-01' = {
 - Combine ferramentas: CLI para testes locais, ARM/Bicep para produção, Azure DevOps para pipelines.
 - Use **validação e pré-visualização** antes de implantar recursos críticos.
 - Acompanhe implantações com **logs e alertas**.
+
+
+<br><br><br>
+# Desafio de Projeto 11: Monitoramento Inteligente com o Azure
+
+O monitoramento inteligente no Microsoft Azure permite **detectar, diagnosticar, prevenir e responder** a problemas em tempo real com o apoio de ferramentas integradas de observabilidade. Ele combina **telemetria**, **inteligência artificial** e **automação** para fornecer visibilidade total sobre sua infraestrutura e aplicações na nuvem.
+
+## 1. Azure Monitor
+
+- Plataforma unificada de **coleta e análise de dados** de desempenho e integridade dos recursos.
+- Coleta:
+  - Métricas (ex: CPU, memória, IOPS)
+  - Logs (eventos, auditorias, diagnósticos)
+  - Traces e dependências de aplicações
+- Permite configurar **alertas**, **dashboards** personalizados e **ações automatizadas**.
+
+## 2. Log Analytics
+
+- Módulo do Azure Monitor baseado em **Kusto Query Language (KQL)**.
+- Permite consultas avançadas em grandes volumes de logs de múltiplas fontes.
+- Útil para análise de segurança, troubleshooting e otimização de desempenho.
+
+## 3. Application Insights
+
+- Foco em **monitoramento de aplicações** (back-ends, APIs, apps web/mobile).
+- Recursos:
+  - Tempo de resposta
+  - Taxa de erros
+  - Tracing de dependências (bancos, APIs externas)
+  - Mapa de aplicações
+- Ideal para equipes de desenvolvimento aplicarem práticas de **observabilidade** e **DevOps**.
+
+## 4. Microsoft Defender for Cloud
+
+- Ferramenta de segurança que complementa o monitoramento.
+- Avalia postura de segurança dos recursos.
+- Detecta vulnerabilidades e comportamentos anômalos.
+- Sugere ações corretivas com base em **modelos de ameaça**.
+
+## 5. Azure Sentinel (SIEM/SOAR)
+
+- Solução nativa de **análise inteligente de segurança (SIEM)** e **resposta automatizada (SOAR)**.
+- Integra dados de múltiplas fontes (Azure, on-premises, SaaS).
+- Detecta ameaças com **inteligência artificial** e permite **respostas automáticas**.
+
+## 6. Integrações e Ações Automatizadas
+
+- Alertas personalizados com:
+  - **Emails**
+  - **Webhooks**
+  - **Azure Functions**
+  - **Logic Apps**
+- Pode automatizar ações como reinício de VM, envio de mensagens no Teams, entre outras.
+
+## 7. Visualização e Insights
+
+- **Workbooks**: dashboards interativos com gráficos e relatórios.
+- **Grafana no Azure**: integração nativa com o Azure Monitor para painéis customizados.
+- **Power BI**: conexão com Log Analytics para relatórios executivos.
+
+## Boas Práticas
+
+- Defina **KPIs e SLAs** claros para os serviços monitorados.
+- Use **Application Insights** desde o desenvolvimento para identificar gargalos cedo.
+- Configure **alertas proativos** com base em métricas críticas.
+- Ative **Diagnóstico de Logs** em todos os recursos.
+- Centralize logs e métricas em **Log Analytics Workspaces**.
+- Revise e atualize as configurações de monitoramento regularmente.
+
 
 
 
